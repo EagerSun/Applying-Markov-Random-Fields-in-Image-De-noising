@@ -1,0 +1,5 @@
+numpy
+matplotlib
+PIL
+scikit-learn
+scikit-image
