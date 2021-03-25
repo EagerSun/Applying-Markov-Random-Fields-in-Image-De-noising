@@ -33,15 +33,15 @@ For the machanisms for updating node's value from its neighbors, three aspects w
 ## Comparsion:
 As result, Gibbs Sampling is better than ICM in binary denoising. 
 
-![1](Sample Result/1.png)
+![1](/Sample Result/1.png)
 
-![2](Sample Result/2.png)
+![2](/Sample Result/2.png)
 
 ICM is much better than Gibbs Sampling in colorful denoising. 
 
 For further study, ICM was compared with other API in denoising in RGB denoising. Further detail could be checked in `Report.pdf`.
 
-![3](Sample Result/3.png)
+![3](/Sample Result/3.png)
 
 ## Code:
 
