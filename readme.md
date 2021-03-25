@@ -12,10 +12,10 @@ In this case, two binary images as: data/sample1.jpg, data/sample3.jpg with low 
 Furthermore, RGB image as: data/sample6.jpg with low resolution are chosen for comparing ICM and Gibbs sampling for denoising in MRF for more complex data structure cases.
 
 
-## noising of images:
+## Noising of images:
 In this project, images were noised with pepper noise where pixels in random locations were chosen to reset to random valid values. In detail, for binary images with single channel, pepper noise was added in the only layer. While, for RGB image with three channels, pepper noise was added in each layer independently.
 
-## denoising of images:
+## Denoising of images:
 Initially, MRF was built specifically for the target noised image where MRF have similar shape with the image and each node inside of MRF initialized with value from correspond location in image. For denoising during iterative process, two value updating methods for nodes' value by its 8 neighbors were applied(To be mentioned, consider the node of boarders could not have 8 neighbors, 1 extra layer (value 0 for binary and 255 for RGB) was padding around each channel of images):
 
 1. Gibbs Sampling.
@@ -30,7 +30,7 @@ For the machanisms for updating node's value from its neighbors, three aspects w
 
 3. The Feature of its neighbors of target node: Since in this case, the block (3 * 3) considered for each node is small, the feature assumed is line going through the center of the block where target node should have similar value with neighbors in same feature. Further detail could be checked in `Report.pdf`.
 
-## comparsion:
+## Comparsion:
 As result, Gibbs Sampling is better than ICM in binary denoising. 
 ![1](Sample Result/1.png)
 ![2](Sample Result/2.png)
